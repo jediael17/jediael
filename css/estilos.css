@@ -1,12 +1,42 @@
+/*soft resete do css*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background-image: url("https://image.freepik.com/vetores-gratis/modelo-de-plano-de-fundo-branco-retangular_8167-580.jpg");
-  background-size: auto 100vh ;
-  font-family: Arial;  
+  background-image: url("../img/fundo.jpg");
+  background-size: auto 100vh ;    
   height : 100vh;
+}
+
+/* se a tela tiver pelo mesno 400px vai carregar estes estilos*/
+@media(min-width: 400px) {
+body {
+  font-size: 18 px;
+  }
+}
+
+@media(min-width: 600px) {
+  body {
+    font-size: 22 px;
+    }
+  }
+
+header {
+  height: 100vh;
+  display: flex;
+  align-items:  center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .menu {
   background-color: white;
+  position: fixed;
+  top: 0;
+  width: 100vw;
 }
 
 .menu ul {
@@ -18,20 +48,27 @@ body {
   list-style: none;
 }
 
-a {
+.menu a {
   color: teal;
-  text-decoration: none;
+  display: block;
+  padding: 10px;
+  text-decoration: nome;  
 }
 
-a:hover {
-  text-decoration: underline;
-}
-.site-subtitle,
 .site-title {
-  color: blacksmoke;
+  color: whitesmoke;
   text-align: center;
 }
 
-.site-subtitle {
-  font-style: italic; 
+.site-subtitle{
+  color: silver;
+  font-style: italic;
+  font-weight: lighter;
+  text-align: center;
+  font-size: 2em;
+}
+
+.img-portfolio {
+  height: 180px;
+  width:  180px;
 }
